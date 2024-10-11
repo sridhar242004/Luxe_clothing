@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE - Redefining Luxury Fashion</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .hero-section {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .text-stroke {
+            -webkit-text-stroke: 1px #ffffff;
+            color: transparent;
+        }
+
+        .hover-lift {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-10px);
+        }
+
+        .glitch {
+            position: relative;
+        }
+
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .glitch::before {
+            left: 2px;
+            text-shadow: -2px 0 #ff00c1;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
+        }
+
+        .glitch::after {
+            left: -2px;
+            text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+            animation: glitch-anim2 1s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% {
+                clip: rect(90px, 9999px, 61px, 0);
+                transform: skew(0.75deg);
+            }
+            100% {
+                clip: rect(58px, 9999px, 16px, 0);
+                transform: skew(0.03deg);
+            }
+        }
+
+        @keyframes glitch-anim2 {
+            0% {
+                clip: rect(50px, 9999px, 31px, 0);
+                transform: skew(0.07deg);
+            }
+            100% {
+                clip: rect(42px, 9999px, 15px, 0);
+                transform: skew(0.01deg);
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-black">
+    <!-- Header -->
+    <header class="fixed w-full z-50 transition-all duration-300 bg-transparent">
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex justify-between items-center">
+                <ul class="flex space-x-8">
+                    <li><a href="w.html" class="text-sm uppercase tracking-wider hover:text-gray-300 transition-colors">Women</a></li>
+                    <li><a href="m.html" class="text-sm uppercase tracking-wider hover:text-gray-300 transition-colors">Men</a></li>
+                    <li><a href="j.html" class="text-sm uppercase tracking-wider hover:text-gray-300 transition-colors">Jewelry</a></li>
+                    <li><a href="b.html" class="text-sm uppercase tracking-wider hover:text-gray-300 transition-colors">Beauty</a></li>
+                </ul>
+                <div class="text-center">
+                    <h1 class="text-3xl font-bold tracking-widest glitch" data-text="LUXE">LUXE</h1>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-sm uppercase tracking-wider hover:text-gray-300 transition-colors">Search</a>
+                    <a href="#" class="text-sm uppercase tracking-wider hover:text-gray-300 transition-colors">Account</a>
+                    <a href="#" class="text-sm uppercase tracking-wider hover:text-gray-300 transition-colors relative">
+                        Cart
+                        <span class="absolute -top-2 -right-2 bg-white text-black text-xs rounded-full h-4 w-4 flex items-center justify-center">0</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section with Video Background -->
+    <main>
+        <section class="hero-section flex items-center justify-center">
+            <video autoplay muted loop>
+                <source src="Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="text-center">
+                <h2 class="text-7xl md:text-9xl font-light mb-6 glitch" data-text="FW 2024">FW 2024</h2>
+                <p class="text-xl md:text-2xl mb-8">Redefining Luxury for the Modern Era</p>
+                <div class="space-x-4">
+                    <a href="w.html" class="inline-block border border-white px-8 py-3 text-sm uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Women's Collection</a>
+                    <a href="m.html" class="inline-block border border-white px-8 py-3 text-sm uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Men's Collection</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <section class="py-20 bg-white text-black">
+            <div class="container mx-auto px-4">
+                <h3 class="text-4xl font-light mb-12 text-center">New Arrivals</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="product-card hover-lift">
+                        <img src="pexels-mart-production-8801195.jpg" alt="Luxury Handbag" class="w-full h-auto mb-4">
+                        <div class="p-4">
+                            <h4 class="text-lg font-light">Leather Crossbody Bag</h4>
+                            <p class="text-gray-600">$2,900</p>
+                            <button class="mt-4 w-full bg-black text-white py-2 hover:bg-gray-800 transition-colors">Add to Bag</button>
+                        </div>
+                    </div>
+                    <div class="product-card hover-lift">
+                        <img src="pexels-anuradha-mishra-357832475-14900849.jpg" alt="Silk Scarf" class="w-full h-auto mb-4">
+                        <div class="p-4">
+                            <h4 class="text-lg font-light">Printed Silk Scarf</h4>
+                            <p class="text-gray-600">$495</p>
+                            <button class="mt-4 w-full bg-black text-white py-2 hover:bg-gray-800 transition-colors">Add to Bag</button>
+                        </div>
+                    </div>
+                    <div class="product-card hover-lift">
+                        <img src="pexels-perfect-lens-10538743.jpg" alt="Leather Loafers" class="w-full h-auto mb-4">
+                        <div class="p-4">
+                            <h4 class="text-lg font-light">Horsebit Loafers</h4>
+                            <p class="text-gray-600">$890</p>
+                            <button class="mt-4 w-full bg-black text-white py-2 hover:bg-gray-800 transition-colors">Add to Bag</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-black text-white parallax" style="background-image: url('https://source.unsplash.com/random/1920x1080/?luxury,fashion,black');">
+            <div class="container mx-auto px-4">
+                <div class="text-center">
+                    <h3 class="text-6xl font-light mb-8 text-stroke">Redefining Luxury</h3>
+                    <p class="text-xl mb-12">Experience the pinnacle of fashion and craftsmanship</p>
+                    <a href="#" class="inline-block border border-white px-12 py-4 text-sm uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Explore Our Legacy</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white text-black">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="relative overflow-hidden group">
+                        <img src="pexels-cottonbro-10120864.jpg" alt="Women's Collection" class="w-full h-full object-cover transition-transform duration-700 transform group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center text-white">
+                                <h3 class="text-4xl font-light mb-4">Women's Collection</h3>
+                                <a href="w.html" class="inline-block border border-white px-8 py-3 text-sm uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Discover More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden group">
+                        <img src="pexels-shvets-production-9775889.jpg" alt="Men's Collection" class="w-full h-full object-cover transition-transform duration-700 transform group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center text-white">
+                                <h3 class="text-4xl font-light mb-4">Men's Collection</h3>
+                                <a href="m.html" class="inline-block border border-white px-8 py-3 text-sm uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Discover More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-black text-white diagonal-split">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-5xl font-light mb-6">The Art of Craftsmanship</h3>
+                        <p class="text-xl mb-8">Every LUXE piece is a testament to the skill and dedication of our master artisans. Experience luxury that goes beyond mere aesthetics.</p>
+                        <a href="#" class="inline-block border border-white px-8 py-3 text-sm uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Our Process</a>
+                    </div>
+                    <div>
+                        <img src="pexels-sina-bahar-46100695-13295278.jpg" alt="Craftsmanship" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-black text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h3 class="text-4xl font-light mb-8">Join the LUXE Community</h3>
+                <p class="text-xl mb-12">Be the first to know about new collections, exclusive events, and special offers.</p>
+                <form class="max-w-md mx-auto">
+                    <div class="flex">
+                        <input type="email" placeholder="Enter your email" class="flex-grow px-4 py-2 bg-transparent border border-white text-white placeholder-gray-400 focus:outline-none">
+                        <button type="submit" class="px-6 py-2 bg-white text-black uppercase tracking-wider hover:bg-gray-200 transition-colors">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <h4 class="text-sm font-bold mb-6 uppercase">Client Services</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Shipping & Returns</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Store Locator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold mb-6 uppercase">The Company</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">About LUXE</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Sustainability</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Press</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold mb-6 uppercase">Legal</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Cookie Policy</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold mb-6 uppercase">Follow Us</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Instagram</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Facebook</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Twitter</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center">
+                <p class="text-sm text-gray-400">&copy; 2024 LUXE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add scroll event listener to change header background
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-black');
+                header.classList.remove('bg-transparent');
+            } else {
+                header.classList.remove('bg-black');
+                header.classList.add('bg-transparent');
+            }
+        });
+    </script>
+</body>
+</html>

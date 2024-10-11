@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE - Men's Collection</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .hero-section {
+            height: 70vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hover-zoom {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hover-zoom:hover {
+            transform: scale(1.05);
+        }
+
+        .product-overlay {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+
+        .filter-active {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-white text-black">
+    <header class="fixed w-full z-50 transition-all duration-300 bg-white">
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex justify-between items-center">
+                <ul class="flex space-x-8">
+                    <li><a href="w.html" class="text-sm uppercase tracking-wider hover:text-gray-600 transition-colors">Women</a></li>
+                    <li><a href="index.html" class="text-sm uppercase tracking-wider hover:text-gray-600 transition-colors">Home</a></li>
+                    <li><a href="j.html" class="text-sm uppercase tracking-wider hover:text-gray-600 transition-colors">Jewelry</a></li>
+                    <li><a href="b.html" class="text-sm uppercase tracking-wider hover:text-gray-600 transition-colors">Beauty</a></li>
+                </ul>
+                <div class="text-center">
+                    <h1 class="text-3xl font-bold tracking-widest">LUXE</h1>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-sm uppercase tracking-wider hover:text-gray-600 transition-colors">Search</a>
+                    <a href="#" class="text-sm uppercase tracking-wider hover:text-gray-600 transition-colors">Account</a>
+                    <a href="#" class="text-sm uppercase tracking-wider hover:text-gray-600 transition-colors relative">
+                        Cart
+                        <span class="absolute -top-2 -right-2 bg-black text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">0</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section relative flex items-center justify-center">
+            <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
+                <source src="6616741-uhd_4096_2160_25fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="relative z-10 text-center text-white">
+                <h2 class="text-6xl md:text-8xl font-light mb-6">Men's Collection</h2>
+                <p class="text-xl md:text-2xl mb-8">Redefining masculinity through timeless elegance</p>
+            </div>
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+        </section>
+    </main>
+
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center mb-12">
+                    <h3 class="text-3xl font-light">Our Collections</h3>
+                    <div class="flex space-x-4">
+                        <button class="filter-btn px-4 py-2 border border-black hover:bg-black hover:text-white transition-colors">All</button>
+                        <button class="filter-btn px-4 py-2 border border-black hover:bg-black hover:text-white transition-colors">Suits</button>
+                        <button class="filter-btn px-4 py-2 border border-black hover:bg-black hover:text-white transition-colors">Casual</button>
+                        <button class="filter-btn px-4 py-2 border border-black hover:bg-black hover:text-white transition-colors">Accessories</button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="product-card relative overflow-hidden group">
+                        <img src="pexels-clint-maliq-1590638-15978108.jpg" alt="Tailored Suit" class="w-full h-auto hover-zoom">
+                        <div class="product-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <h4 class="text-xl font-light mb-2">Tailored Wool Suit</h4>
+                                <p class="mb-4">$3,200</p>
+                                <button class="px-6 py-2 bg-white text-black uppercase tracking-wider hover:bg-gray-200 transition-colors">Quick View</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card relative overflow-hidden group">
+                        <img src="pexels-yassine-benmoussa-1650792656-28773889.jpg" alt="Cashmere Sweater" class="w-full h-auto hover-zoom">
+                        <div class="product-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <h4 class="text-xl font-light mb-2">Cashmere Sweater</h4>
+                                <p class="mb-4">$890</p>
+                                <button class="px-6 py-2 bg-white text-black uppercase tracking-wider hover:bg-gray-200 transition-colors">Quick View</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card relative overflow-hidden group">
+                        <img src="pexels-vishwanth07-12811978.jpg" alt="Leather Briefcase" class="w-full h-auto hover-zoom">
+                        <div class="product-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <h4 class="text-xl font-light mb-2">Leather Briefcase</h4>
+                                <p class="mb-4">$1,500</p>
+                                <button class="px-6 py-2 bg-white text-black uppercase tracking-wider hover:bg-gray-200 transition-colors">Quick View</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card relative overflow-hidden group">
+                        <img src="pexels-tima-miroshnichenko-6765524.jpg" alt="Oxford Shoes" class="w-full h-auto hover-zoom">
+                        <div class="product-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <h4 class="text-xl font-light mb-2">Oxford Shoes</h4>
+                                <p class="mb-4">$950</p>
+                                <button class="px-6 py-2 bg-white text-black uppercase tracking-wider hover:bg-gray-200 transition-colors">Quick View</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card relative overflow-hidden group">
+                        <img src="pexels-mikebirdy-130855.jpg" alt="Silk Tie" class="w-full h-auto hover-zoom">
+                        <div class="product-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <h4 class="text-xl font-light mb-2">Silk Tie</h4>
+                                <p class="mb-4">$250</p>
+                                <button class="px-6 py-2 bg-white text-black uppercase tracking-wider hover:bg-gray-200 transition-colors">Quick View</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card relative overflow-hidden group">
+                        <img src="pexels-kristian-bogh-141442255-10340815.jpg" alt="Leather Belt" class="w-full h-auto hover-zoom">
+                        <div class="product-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <h4 class="text-xl font-light mb-2">Leather Belt</h4>
+                                <p class="mb-4">$350</p>
+                                <button class="px-6 py-2 bg-white text-black uppercase tracking-wider hover:bg-gray-200 transition-colors">Quick View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <button class="px-8 py-3 border border-black text-sm uppercase tracking-wider hover:bg-black hover:text-white transition-colors">Load More</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h3 class="text-3xl font-light mb-12 text-center">Lookbook</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <img src="pexels-cottonbro-6626418.jpg" alt="Lookbook 1" class="w-full h-auto hover-zoom cursor-pointer">
+                    <img src="pexels-cottonbro-6764707.jpg" alt="Lookbook 2" class="w-full h-auto hover-zoom cursor-pointer">
+                    <img src="pexels-pro5-vn-1368185933-26524782.jpg" alt="Lookbook 3" class="w-full h-auto hover-zoom cursor-pointer">
+                    <img src="pexels-maide-arslan-128712163-28774178.jpg" alt="Lookbook 4" class="w-full h-auto hover-zoom cursor-pointer">
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <img src="pexels-sina-bahar-46100695-13295278.jpg" alt="Tailoring Service" class="w-full h-auto">
+                    </div>
+                    <div class="md:w-1/2 md:pl-12">
+                        <h3 class="text-3xl font-light mb-6">Bespoke Tailoring</h3>
+                        <p class="text-lg mb-8">Experience the pinnacle of men's fashion with our bespoke tailoring service. Our master craftsmen will create a garment that's uniquely yours, reflecting your individual style and ensuring the perfect fit.</p>
+                        <a href="#" class="inline-block border border-black px-8 py-3 text-sm uppercase tracking-wider hover:bg-black hover:text-white transition-colors">Book an Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <h4 class="text-sm font-bold mb-6 uppercase">Client Services</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Shipping & Returns</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Store Locator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold mb-6 uppercase">The Company</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">About LUXE</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Sustainability</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Press</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold mb-6 uppercase">Legal</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Cookie Policy</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold mb-6 uppercase">Follow Us</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Instagram</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Facebook</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Twitter</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center">
+                <p class="text-sm text-gray-400">&copy; 2024 LUXE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add scroll event listener to change header background
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Add click event listeners to filter buttons
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('filter-active'));
+                button.classList.add('filter-active');
+                // Add logic here to filter products based on the selected category
+            });
+        });
+    </script>
+</body>
+</html>

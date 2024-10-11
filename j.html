@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE - Jewelry Collection</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .hero-section {
+            height: 60vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hover-lift {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-10px);
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .inset-0 {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .z-10 {
+            z-index: 10;
+        }
+
+        .opacity-50 {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body class="bg-white text-black">
+    <header class="fixed w-full z-50 transition-all duration-300 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex justify-between items-center">
+                <ul class="flex space-x-8">
+                    <li><a href="w.html" class="text-sm uppercase tracking-wider hover:text-gray-600 transition-colors">Women</a></li>
+                    <li><a href="m.html" class="text-sm uppercase tracking-wider hover:text-gray-600 transition-colors">Men</a></li>
+                    <li><a href="index.html" class="text-sm uppercase tracking-wider hover:text-gray-600 transition-colors font-bold">Home</a></li>
+                    <li><a href="b.html" class="text-sm uppercase tracking-wider hover:text-gray-600 transition-colors">Beauty</a></li>
+                </ul>
+                <div class="text-center">
+                    <h1 class="text-3xl font-bold tracking-widest">LUXE</h1>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-sm uppercase tracking-wider hover:text-gray-600 transition-colors">Search</a>
+                    <a href="#" class="text-sm uppercase tracking-wider hover:text-gray-600 transition-colors">Account</a>
+                    <a href="#" class="text-sm uppercase tracking-wider hover:text-gray-600 transition-colors relative">
+                        Cart
+                        <span class="absolute -top-2 -right-2 bg-black text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">0</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section relative flex items-center justify-center">
+            <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
+                <source src="5106444-hd_1920_1080_25fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="relative z-10 text-center text-white">
+                <h2 class="text-6xl md:text-7xl font-light mb-6">Jewelry Collection</h2>
+                <p class="text-xl md:text-2xl mb-8">Timeless Elegance, Crafted to Perfection</p>
+            </div>
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+        </section>
+    </main>
+
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <h3 class="text-4xl font-light mb-12 text-center">Featured Pieces</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="product-card hover-lift">
+                        <img src="pexels-the-glorious-studio-3584518-10983780.jpg" alt="Diamond Necklace" class="w-full h-auto mb-4">
+                        <div class="p-4">
+                            <h4 class="text-lg font-light">Diamond Eternity Necklace</h4>
+                            <p class="text-gray-600">$12,500</p>
+                            <button class="mt-4 w-full bg-black text-white py-2 hover:bg-gray-800 transition-colors">Add to Bag</button>
+                        </div>
+                    </div>
+                    <div class="product-card hover-lift">
+                        <img src="pexels-the-glorious-studio-3584518-10983785.jpg" alt="Gold Bracelet" class="w-full h-auto mb-4">
+                        <div class="p-4">
+                            <h4 class="text-lg font-light">18K Gold Link Bracelet</h4>
+                            <p class="text-gray-600">$5,900</p>
+                            <button class="mt-4 w-full bg-black text-white py-2 hover:bg-gray-800 transition-colors">Add to Bag</button>
+                        </div>
+                    </div>
+                    <div class="product-card hover-lift">
+                        <img src="pexels-mohamad-ali-altaweel-200026965-19820885.jpg" alt="Pearl Earrings" class="w-full h-auto mb-4">
+                        <div class="p-4">
+                            <h4 class="text-lg font-light">South Sea Pearl Earrings</h4>
+                            <p class="text-gray-600">$3,200</p>
+                            <button class="mt-4 w-full bg-black text-white py-2 hover:bg-gray-800 transition-colors">Add to Bag</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-5xl font-light mb-6">The Art of Fine Jewelry</h3>
+                        <p class="text-xl mb-8">Each LUXE jewelry piece is a masterpiece of craftsmanship, combining precious metals and stones to create wearable art that lasts a lifetime.</p>
+                        <a href="#" class="inline-block border border-black px-8 py-3 text-sm uppercase tracking-wider hover:bg-black hover:text-white transition-colors">Explore Our Craft</a>
+                    </div>
+                    <div>
+                        <img src="pexels-coppertist-wu-313365563-15955333.jpg" alt="Jewelry Craftsmanship" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <h4 class="text-sm font-bold mb-6 uppercase">Client Services</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Shipping & Returns</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Store Locator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold mb-6 uppercase">The Company</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">About LUXE</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Sustainability</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Press</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold mb-6 uppercase">Legal</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Cookie Policy</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold mb-6 uppercase">Follow Us</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Instagram</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Facebook</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Twitter</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center">
+                <p class="text-sm text-gray-400">&copy; 2024 LUXE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
